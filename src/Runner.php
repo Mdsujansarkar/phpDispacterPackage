@@ -1,7 +1,8 @@
 <?php
 declare(strict_types=1);
-namespace App;
 
+namespace App;
+use App\TaskContact;
 class Runner {
     private function __construct(
         protected array $task,
@@ -18,8 +19,32 @@ class Runner {
     {
         $this->task;
     }
-    public function add()
+    public function add(TaskContact $task): self
     {
-        
+        $this ->tasks[] = $task;
+        return $this;
+    }
+    public function run(array $payload):array
+    {
+       
+        foreach ($this->task() as $task) {
+
+            if(method_exists($task, 'before')) {
+                $payload = $task->before(
+                    payload:$payload,
+                );
+            }
+
+            $payload = $task->handle(
+                payload: $payload,
+            );
+
+            if(method_exists($task, 'after')) {
+                $payload = $task->after(
+                    payload:$payload,
+                );
+            }
+        }
+        return $payload;
     }
 }

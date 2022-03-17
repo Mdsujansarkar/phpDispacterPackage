@@ -1,0 +1,34 @@
+{
+    "name": "sujan/phppackage",
+    "description": "Simpole package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mdsujansarkar",
+            "email": "sujansarkar786@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.20"
+    }
+}

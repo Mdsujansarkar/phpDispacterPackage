@@ -7,5 +7,7 @@ composer require simple-taskmanager/simple-taskmanager
 
 ```php
 $runner = Ranner::prepare([]);
-$runner ->add();
+$task = new TaskOne();
+$runner ->add($task);
+$runner ->run();
 ```

@@ -14,4 +14,12 @@ class Runner {
             payload:$payload
         );
     }
+    public function task()
+    {
+        $this->task;
+    }
+    public function add()
+    {
+        
+    }
 }

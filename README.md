@@ -11,3 +11,4 @@ $task = new TaskOne();
 $runner ->add($task);
 $runner ->run();
 ```
+ok

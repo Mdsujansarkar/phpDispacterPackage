@@ -1,0 +1,1 @@
+{"version":1,"defects":{"App\\Tests\\RunnerTest::it_can_add_new_task":4},"times":{"App\\Tests\\RunnerTest::it_will_be_runner":0.003,"App\\Tests\\RunnerTest::it_can_add_new_task":0.002}}

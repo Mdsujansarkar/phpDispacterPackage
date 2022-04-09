@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace App;
-use App\TaskContact;
+use App\Contracts\TaskContact;
 class Runner {
     private function __construct(
         protected array $task,
